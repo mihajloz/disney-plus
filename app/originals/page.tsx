@@ -6,7 +6,7 @@ import CollectionSlider from "../(slider)/CollectionSlider";
 import { Movie } from "@/interfaces/Movie";
 import PageFooter from "../(homepage)/PageFooter";
 
-export default async function Page({ scrollThreshold = 1 }) {
+export default async function Page() {
   const fetchedMovies = await getMovies();
 
   return (
