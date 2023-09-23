@@ -1,0 +1,295 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+@layer base {
+  body {
+    font-family: "Monserrat", sans-serif;
+  }
+}
+
+.nav-fade-in {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.nav-fade-in.visible {
+  opacity: 1;
+}
+
+.two-col {
+  flex: 0 0 calc(50% - 12px);
+  width: calc(50% - 12px);
+}
+
+.four-col {
+  flex: 0 0 calc(25% - 18px);
+  width: calc(25% - 18px);
+}
+
+#dropdown-menu {
+  display: none;
+}
+
+#hover-trigger:hover + #dropdown-menu,
+#dropdown-menu:hover {
+  display: block;
+  width: 240px;
+}
+
+.navbar-bg {
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.03) 15%,
+    rgba(0, 0, 0, 0.125) 30%,
+    rgba(0, 0, 0, 0.25) 46%,
+    rgba(0, 0, 0, 0.4) 61%,
+    rgba(0, 0, 0, 0.553) 75%,
+    rgba(0, 0, 0, 0.694) 88%,
+    rgba(0, 0, 0, 0.8)
+  );
+  @apply w-full pl-[20px] md:pl-[36px] h-[72px] fixed top-0 z-[100] duration-300;
+}
+
+.nav-button {
+  @apply relative;
+}
+
+.nav-button::after {
+  @apply content-[''] absolute bg-white h-[2px] w-[0%] left-[0px] -bottom-[8px] rounded-b-md opacity-0 duration-300 ease-in-out group-hover:w-[100%] group-hover:opacity-100;
+}
+
+.nav-button:hover::after {
+  @apply w-[100%] opacity-100;
+}
+
+.slick-prev::before,
+.slick-next::before {
+  content: none !important;
+}
+
+.brand-cards {
+  @apply flex flex-row flex-wrap -ml-5 mr-0 my-0;
+  padding: 0px calc(3.5vw + 24px) 20px calc(3.5vw + 24px);
+}
+
+.brand {
+  @apply flex w-[calc(33.3333%_-_20px)] md:w-[calc(16.6667%_-_20px)] shadow-[rgba(0,0,0,0.69)_0px_26px_30px_-10px,rgba(0,0,0,0.73)_0px_20px_10px_-10px] ml-5 mr-0 mt-5 mb-0 rounded-[10px];
+  background: linear-gradient(rgb(48, 50, 62), rgb(30, 31, 42));
+  transform: scale(1);
+  transition: all 250ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s !important;
+}
+
+.brand:hover {
+  @apply outline-offset-[3px] shadow-[rgba(0,0,0,0.8)_0px_40px_58px_-16px,rgba(0,0,0,0.72)_0px_30px_22px_-10px] scale-105 cursor-pointer;
+  outline: white solid 3px;
+}
+
+.brand-vid {
+  @apply opacity-0 group-hover:opacity-100 absolute w-full h-full top-0 rounded-[10px] z-0;
+}
+
+.brand-img {
+  @apply z-10;
+}
+
+.thumbnail,
+.large-thumbnail {
+  border-radius: 4px;
+  transform: scale(1);
+  transition: all 250ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s !important;
+  transform-origin: center;
+  box-shadow: rgba(0, 0, 0, 0.69) 0px 26px 30px -10px,
+    rgba(0, 0, 0, 0.73) 0px 16px 10px -10px;
+}
+
+.basic-card {
+  border-radius: 4px;
+  transform: scale(1);
+  box-shadow: rgba(0, 0, 0, 0.69) 0px 26px 30px -10px,
+    rgba(0, 0, 0, 0.73) 0px 16px 10px -10px;
+}
+
+.thumbnail:hover {
+  @apply outline-offset-[3px] scale-105 cursor-pointer;
+  outline: white solid 3px;
+  box-shadow: rgba(0, 0, 0, 0.8) 0px 10px 58px -16px,
+    rgba(0, 0, 0, 0.72) 0px 30px 22px -10px;
+}
+
+.large-thumbnail:hover {
+  @apply outline-offset-[3px] scale-[103%] cursor-pointer;
+  outline: white solid 3px;
+  box-shadow: rgba(0, 0, 0, 0.8) 0px 40px 58px -16px,
+    rgba(0, 0, 0, 0.72) 0px 30px 22px -10px;
+}
+
+.slick-list {
+  overflow: visible !important;
+  margin: 0px calc(3.5vw + 10px) 20px calc(3.5vw + 10px) !important;
+}
+
+.responsive-carousel-arrow {
+  width: calc(3.5vw + 20px) !important;
+  @apply opacity-0 hover:opacity-100 duration-200;
+}
+
+.main-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0px;
+  opacity: 1;
+  z-index: -100;
+}
+
+.main-bg {
+  background-color: rgb(26, 29, 41);
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  top: 0px;
+  z-index: -10;
+}
+
+.app-bg::after {
+  background: url("../public/assets/img/background.png") 50% / cover no-repeat
+    fixed;
+}
+
+.main-carousel-item {
+  box-shadow: rgba(0, 0, 0, 0.69) 0px 20px 30px -10px,
+    rgba(0, 0, 0, 0.73) 0px 10px 10px -10px;
+}
+
+.single-view-bg {
+  background-color: rgb(26, 29, 41);
+  position: fixed;
+  height: 100vh;
+  top: 0px;
+  transition: opacity 200ms ease 0s;
+  width: 100%;
+  z-index: -3;
+}
+
+.single-view-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0px;
+  opacity: 0;
+  transition: opacity 500ms ease 0s;
+}
+
+.single-view-radial {
+  background-image: radial-gradient(
+    farthest-side at 73% 21%,
+    transparent,
+    rgb(26, 29, 41)
+  );
+  position: absolute;
+  inset: 0px;
+}
+
+.details {
+  padding-left: calc(3.5vw + 24px);
+}
+
+.single-movie-nav-button {
+  @apply relative cursor-pointer mr-10 pb-[15px] text-[20px] text-[#cacaca] font-semibold tracking-wide uppercase;
+}
+
+.single-movie-nav-button::after {
+  content: "";
+  @apply h-[3px] bg-white/80 w-full rounded-full absolute bottom-0 left-0 opacity-0 duration-200;
+}
+
+.single-movie-nav-button:hover::after {
+  opacity: 1;
+}
+
+.single-movie-nav-button:hover {
+  @apply text-[#f9f9f9];
+}
+
+.active-nav-button {
+  @apply text-[#f9f9f9];
+}
+
+.active-nav-button::after {
+  opacity: 1;
+}
+
+.details-nav {
+  margin-left: calc(3.5vw + 24px);
+  margin-right: calc(3.5vw + 24px);
+}
+
+.details-nav-content {
+  margin-left: calc(3.5vw + 24px);
+}
+
+.single-movie-details-title {
+  @apply text-[#cacaca] text-[15px];
+}
+
+.single-movie-details-content {
+  @apply text-[#f9f9f9] text-[15px];
+}
+
+.brand-radial {
+  background-image: linear-gradient(
+    transparent 25%,
+    transparent 50%,
+    rgb(26, 29, 41) 75%,
+    rgb(26, 29, 41) 100%
+  );
+  position: absolute;
+  inset: 0px;
+}
+
+.brand-bg-img {
+  opacity: 1;
+  transition: opacity 200ms ease 0s;
+}
+
+.brand-bg-vid {
+  opacity: 1;
+  position: absolute;
+}
+
+.search-padding {
+  padding-left: calc(3.5vw + 24px);
+}
+
+.content-padding {
+  padding-left: calc(3.5vw + 24px);
+  padding-right: calc(3.5vw + 24px);
+}
+
+.slick-dots ul li div::before {
+  content: "•";
+  @apply text-[#969eab] text-[20px] leading-[20px];
+}
+
+.slick-active div::before {
+  @apply text-white !important;
+}
+
+.slick-dots li {
+  margin: 0px !important;
+}
+
+.select-list-item {
+  @apply bg-[#1A1A1A] cursor-pointer px-6 hover:bg-[#2E2E2E] duration-300 py-1 text-[13px] uppercase text-[#f9f9f9];
+}
+
+.selected-item {
+  @apply bg-[#2E2E2E] relative;
+}
+
+.selected-item::before {
+  content: "";
+  @apply absolute left-2 bottom-2 w-[3px] h-3 rounded-full bg-[#f9f9f9];
+}
