@@ -22,9 +22,6 @@ export default async function Home() {
 
   const fetchedMovies = await getMovies();
 
-  // const oneMovieTest = await getSingleMovie("Beauty and the Beast");
-  // console.log(oneMovieTest);
-
   return (
     <>
       {!session ? (
