@@ -1,23 +1,16 @@
 import Image from "next/image";
-import tarzanBg from "../../public/assets/img/singleView/tarzan2-bg.jpeg";
-import tarzanLogo from "../../public/assets/img/singleView/tarzan2-logo.png";
 import rating0 from "../../public/assets/img/singleView/rating0.png";
 import ad from "../../public/assets/img/singleView/ad.png";
 import cc from "../../public/assets/img/singleView/cc.png";
 import { FaPlus } from "react-icons/fa";
-import SingleMovieViewExtras from "./SingleMovieViewExtras";
-import SingleMovieViewDetails from "./SingleMovieViewDetails";
-import RecommendedCollection from "../(homepageLoggedin)/RecommendedCollection";
 import PageFooter from "../(homepage)/PageFooter";
 import getSingleMovie from "../libs/getSingleMovie";
-import { Movie } from "@/interfaces/Movie";
 import SingleMovieViewNav from "./SingleMovieViewNav";
 import getMovies from "../libs/getMovies";
 
 const SingleMovieView = async ({ params }: any) => {
   const fetchedMovie = await getSingleMovie(params);
   const suggested = await getMovies();
-  //   console.log(fetchedMovie);
 
   return (
     <div>

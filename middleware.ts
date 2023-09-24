@@ -4,6 +4,7 @@ export const config = {
   matcher: [
     "/brands/:path*",
     "/movies/:path*",
+    "/originals/:path*",
     "/search/:path*",
     "/series/:path*",
   ],

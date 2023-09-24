@@ -15,7 +15,7 @@ function PrevArrow(props: any) {
         left: "0",
         top: "50%",
         transform: "translateY(-50%)",
-        zIndex: 100,
+        zIndex: 10,
         filter: "brightness(85%)",
       }}
       onClick={onClick}
@@ -50,7 +50,7 @@ function NextArrow(props: any) {
         right: 0,
         top: "50%",
         transform: "translateY(-50%)",
-        zIndex: 100,
+        zIndex: 10,
       }}
       onClick={onClick}
     >

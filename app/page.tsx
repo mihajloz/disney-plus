@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Hero from "./(homepage)/Hero";
 import Exclusive from "./(homepage)/Exclusive";
 import Features from "./(homepage)/Features";
@@ -15,7 +14,6 @@ import getMovies from "./libs/getMovies";
 import RecommendedCollection from "./(homepageLoggedin)/RecommendedCollection";
 import LargeThumbMoviesCollection from "./(homepageLoggedin)/LargeThumbMoviesCollection";
 import Nav from "./(homepage)/Nav";
-import getSingleMovie from "@/app/libs/getSingleMovie";
 
 export default async function Home() {
   const session = await getServerSession(options);

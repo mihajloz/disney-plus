@@ -9,17 +9,13 @@ import bleach from "../../public/assets/img/main-carousel/bleach.jpeg";
 import simpsons from "../../public/assets/img/main-carousel/simpsons.jpeg";
 import futurama from "../../public/assets/img/main-carousel/futurama.jpeg";
 import elemental from "../../public/assets/img/main-carousel/elemental.jpeg";
-import groot from "../../public/assets/img/main-carousel/groot.jpeg";
 import pixar from "../../public/assets/img/main-carousel/pixar.png";
-import dug from "../../public/assets/img/main-carousel/dug.jpeg";
 import starwarsOverlay from "../../public/assets/img/main-carousel/starwars-overlay.png";
 import bleachOverlay from "../../public/assets/img/main-carousel/bleach-overlay.png";
 import simpsonsOverlay from "../../public/assets/img/main-carousel/simpsons-overlay.png";
 import futuramaOverlay from "../../public/assets/img/main-carousel/futurama-overlay.png";
 import elementalOverlay from "../../public/assets/img/main-carousel/elemental-overlay.png";
-import grootOverlay from "../../public/assets/img/main-carousel/groot-overlay.png";
 import pixarOverlay from "../../public/assets/img/main-carousel/pixar-overlay.png";
-import dugOverlay from "../../public/assets/img/main-carousel/dug-overlay.png";
 import { PrevArrow, NextArrow } from "./MainCarouselArrows";
 import Link from "next/link";
 
@@ -72,7 +68,7 @@ const MainCarousel = () => {
       <Slider {...settings} className="relative main-carousel">
         <Link href="/movies/Ahsoka" className="p-[10px]">
           <div className="w-[100%] cursor-pointer rounded-[4px] border-[4px] border-transparent hover:border-white/70 duration-200 main-carousel-item">
-            <div className="relative z-1000">
+            <div className="relative">
               <Image
                 src={starwars}
                 priority={true}
@@ -83,13 +79,13 @@ const MainCarousel = () => {
               <Image
                 src={starwarsOverlay}
                 alt="Star Wars Ahsoka"
-                className="absolute z-100 top-0 h-auto w-[22%] md:w-[23%] lg:w-[24%] lg2:w-[27%]"
+                className="absolute top-0 h-auto w-[22%] md:w-[23%] lg:w-[24%] lg2:w-[27%]"
                 loading="eager"
                 style={{
                   inset: "10% auto auto 6.5%",
                 }}
               />
-              <div className="absolute bottom-[10%] left-[6.5%] z-1000 text-white font-semibold md:font-bold text-[10px] md:text-[18px]">
+              <div className="absolute bottom-[10%] left-[6.5%] text-white font-semibold md:font-bold text-[10px] md:text-[18px]">
                 New Part Every Wednesday
               </div>
             </div>
@@ -100,7 +96,7 @@ const MainCarousel = () => {
           className="p-[10px]"
         >
           <div className="w-[100%] cursor-pointer rounded-[4px] border-[4px] border-transparent hover:border-white/70 duration-200 main-carousel-item">
-            <div className="relative z-1000">
+            <div className="relative">
               <Image
                 src={bleach}
                 priority={true}
@@ -111,13 +107,13 @@ const MainCarousel = () => {
               <Image
                 src={bleachOverlay}
                 alt="BLEACH: Thousand Year Blood War"
-                className="absolute z-100 top-0 h-auto w-[22%] md:w-[23%] lg:w-[24%] lg2:w-[27%]"
+                className="absolute top-0 h-auto w-[22%] md:w-[23%] lg:w-[24%] lg2:w-[27%]"
                 loading="eager"
                 style={{
                   inset: "10% auto auto 6.5%",
                 }}
               />
-              <div className="absolute bottom-[10%] left-[6.5%] z-1000 text-white font-semibold md:font-bold text-[10px] md:text-[18px]">
+              <div className="absolute bottom-[10%] left-[6.5%] text-white font-semibold md:font-bold text-[10px] md:text-[18px]">
                 New Episode Every Saturday
               </div>
             </div>
@@ -125,7 +121,7 @@ const MainCarousel = () => {
         </Link>
         <Link href="/brands/pixar" className="p-[10px]">
           <div className="w-[100%] cursor-pointer rounded-[4px] border-[4px] border-transparent hover:border-white/70 duration-200 main-carousel-item">
-            <div className="relative z-1000">
+            <div className="relative">
               <Image
                 src={pixar}
                 priority={true}
@@ -136,7 +132,7 @@ const MainCarousel = () => {
               <Image
                 src={pixarOverlay}
                 alt="Pixar"
-                className="absolute z-100 top-0 w-full"
+                className="absolute top-0 w-full"
                 loading="eager"
               />
             </div>
@@ -144,7 +140,7 @@ const MainCarousel = () => {
         </Link>
         <Link href="/movies/The%20Simpsons" className="p-[10px]">
           <div className="w-[100%] cursor-pointer rounded-[4px] border-[4px] border-transparent hover:border-white/70 duration-200 main-carousel-item">
-            <div className="relative z-1000">
+            <div className="relative">
               <Image
                 src={simpsons}
                 priority={true}
@@ -155,13 +151,13 @@ const MainCarousel = () => {
               <Image
                 src={simpsonsOverlay}
                 alt="The Simpsons"
-                className="absolute z-100 top-0 h-auto w-[22%] md:w-[23%] lg:w-[24%] lg2:w-[27%]"
+                className="absolute top-0 h-auto w-[22%] md:w-[23%] lg:w-[24%] lg2:w-[27%]"
                 loading="eager"
                 style={{
                   inset: "10% auto auto 6.5%",
                 }}
               />
-              <div className="absolute bottom-[10%] left-[6.5%] z-1000 text-white font-semibold md:font-bold text-[10px] md:text-[18px]">
+              <div className="absolute bottom-[10%] left-[6.5%] text-white font-semibold md:font-bold text-[10px] md:text-[18px]">
                 New Episodes Coming Soon
               </div>
             </div>
@@ -169,7 +165,7 @@ const MainCarousel = () => {
         </Link>
         <Link href="/movies/Ahsoka" className="p-[10px]">
           <div className="w-[100%] cursor-pointer rounded-[4px] border-[4px] border-transparent hover:border-white/70 duration-200 main-carousel-item">
-            <div className="relative z-1000">
+            <div className="relative">
               <Image
                 src={futurama}
                 priority={true}
@@ -180,13 +176,13 @@ const MainCarousel = () => {
               <Image
                 src={futuramaOverlay}
                 alt="Futurama"
-                className="absolute z-100 top-0 h-auto w-[22%] md:w-[23%] lg:w-[24%] lg2:w-[27%]"
+                className="absolute top-0 h-auto w-[22%] md:w-[23%] lg:w-[24%] lg2:w-[27%]"
                 loading="eager"
                 style={{
                   inset: "10% auto auto 6.5%",
                 }}
               />
-              <div className="absolute bottom-[10%] left-[6.5%] z-1000 text-white font-semibold md:font-bold text-[10px] md:text-[18px]">
+              <div className="absolute bottom-[10%] left-[6.5%] text-white font-semibold md:font-bold text-[10px] md:text-[18px]">
                 New Episode Every Monday
               </div>
             </div>
@@ -194,7 +190,7 @@ const MainCarousel = () => {
         </Link>
         <Link href="/movies/Elemental" className="p-[10px]">
           <div className="w-[100%] cursor-pointer rounded-[4px] border-[4px] border-transparent hover:border-white/70 duration-200 main-carousel-item">
-            <div className="relative z-1000">
+            <div className="relative">
               <Image
                 src={elemental}
                 priority={true}
@@ -205,13 +201,13 @@ const MainCarousel = () => {
               <Image
                 src={elementalOverlay}
                 alt="Elemental"
-                className="absolute z-100 top-0 h-auto w-[22%] md:w-[23%] lg:w-[24%] lg2:w-[27%]"
+                className="absolute top-0 h-auto w-[22%] md:w-[23%] lg:w-[24%] lg2:w-[27%]"
                 loading="eager"
                 style={{
                   inset: "10% auto auto 6.5%",
                 }}
               />
-              <div className="absolute bottom-[10%] left-[6.5%] z-1000 text-white font-semibold md:font-bold text-[10px] md:text-[18px]">
+              <div className="absolute bottom-[10%] left-[6.5%] text-white font-semibold md:font-bold text-[10px] md:text-[18px]">
                 Coming on Wednesday to Disney+
               </div>
             </div>

@@ -1,6 +1,5 @@
 import Navbar from "@/app/(homepageLoggedin)/Navbar";
 import SingleMovieView from "@/app/(singleMovieView)/SingleMovieView";
-import getSingleMovie from "@/app/libs/getSingleMovie";
 
 import React from "react";
 

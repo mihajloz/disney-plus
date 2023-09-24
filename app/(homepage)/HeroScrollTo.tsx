@@ -1,5 +1,4 @@
 "use client";
-
 import { scrollTo } from "../../utils/scrollTo";
 
 function HeroScrollTo() {

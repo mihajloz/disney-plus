@@ -1,10 +1,6 @@
 import getMovies from "@/app/libs/getMovies";
 import Navbar from "../(homepageLoggedin)/Navbar";
-import Image from "next/image";
 import OriginalsContent from "./(originalsContent)/OriginalsContent";
-import CollectionSlider from "../(slider)/CollectionSlider";
-import { Movie } from "@/interfaces/Movie";
-import PageFooter from "../(homepage)/PageFooter";
 
 export default async function Page() {
   const fetchedMovies = await getMovies();
